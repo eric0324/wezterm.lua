@@ -7,7 +7,7 @@ keys = {
 
 -- 字體
 config.font = wezterm.font('FiraCode Nerd Font Mono')
-config.font_size = 24.0
+config.font_size = 22.0
 
 -- 外觀
 config.color_scheme = 'Gruvbox Dark'
@@ -26,43 +26,7 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
-config.use_fancy_tab_bar = true
-config.window_frame = {
-  -- 字體設定
-  font = wezterm.font({ family = 'FiraCode Nerd Font Mono', weight = 'Bold' }),
-  font_size = 18.0,
-
-  -- 標題列高度（tab bar 高度）
-  active_titlebar_bg = '#1a1b26',
-  inactive_titlebar_bg = '#16161e',
-}
-
--- Tab 顏色細部設定
-config.colors = {
-  tab_bar = {
-    active_tab = {
-      bg_color = '#7aa2f7',
-      fg_color = '#1a1b26',
-      intensity = 'Bold',
-    },
-    inactive_tab = {
-      bg_color = '#24283b',
-      fg_color = '#787c99',
-    },
-    inactive_tab_hover = {
-      bg_color = '#3b4261',
-      fg_color = '#c0caf5',
-    },
-    new_tab = {
-      bg_color = '#1a1b26',
-      fg_color = '#7aa2f7',
-    },
-    new_tab_hover = {
-      bg_color = '#3b4261',
-      fg_color = '#c0caf5',
-    },
-  },
-}
+config.use_fancy_tab_bar = false
 config.colors = {
   tab_bar = {
     background = '#1a1b26',
