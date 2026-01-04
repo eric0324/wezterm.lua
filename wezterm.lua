@@ -1,8 +1,13 @@
 local wezterm = require 'wezterm'
 local config = {}
+local config = wezterm.config_builder()
+local act = wezterm.action
 
-keys = {
-  { key = "Enter", mods = "SHIFT", action = wezterm.action.SendString("\n") },
+-- 快捷鍵
+config.keys = {
+  { key = 'LeftArrow', mods = 'SHIFT|ALT', action = act.MoveTabRelative(-1) },
+  { key = 'RightArrow', mods = 'SHIFT|ALT', action = act.MoveTabRelative(1) },
+  { key = 'Enter', mods = 'SHIFT', action = act.SendString('\x1b\r'), },
 }
 
 -- 字體
@@ -27,6 +32,7 @@ config.window_padding = {
   bottom = 0,
 }
 config.use_fancy_tab_bar = false
+config.tab_bar_at_bottom = false
 config.colors = {
   tab_bar = {
     background = '#1a1b26',
